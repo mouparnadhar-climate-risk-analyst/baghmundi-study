@@ -57,50 +57,61 @@
         </div>
     </header>
 
-    <!-- Overview & Study Area -->
+    <!-- Overview & Study Area (REDESIGNED FOR PERFECT ALIGNMENT) -->
     <section id="overview" class="py-16 max-w-6xl mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold text-blue-900 mb-6 border-l-4 border-blue-600 pl-4 uppercase tracking-wide">Study Overview</h2>
-                
-                <!-- Inclusion of Family/People Photo -->
-                <img src="family.jpg" alt="Local Community in Purulia" class="rounded-lg shadow-md mb-6 border border-gray-200">
-                
-                <!-- Map still remains as requested -->
-                <img src="map.png" alt="Study Area Map" class="rounded-lg shadow-md mb-6 border border-gray-200">
-                
-                <p class="mb-4 text-gray-700 leading-relaxed">
-                    This research by <strong>Mouparna Dhar</strong> focuses on Baghmundi block, Puruliya. It evaluates how effectively national schemes like MGNREGA and PMAY-G are translated into tangible outcomes at the Gram Panchayat level.
+        
+        <h2 class="text-3xl font-bold text-blue-900 mb-8 border-l-4 border-blue-600 pl-4 uppercase tracking-wide">Study Overview</h2>
+        
+        <div class="grid lg:grid-cols-12 gap-10 items-start">
+            
+            <!-- Left Column: Text, Family Image, PDF Download -->
+            <div class="lg:col-span-7 space-y-6">
+                <p class="text-gray-700 leading-relaxed text-lg">
+                    This research by <strong class="text-blue-900">Mouparna Dhar</strong> focuses on <strong>Baghmundi block, Puruliya</strong>. It evaluates how effectively national schemes like MGNREGA and PMAY-G are translated into tangible outcomes at the Gram Panchayat level.
                 </p>
-
+                
+                <img src="family.jpg" alt="Local Community in Purulia" class="rounded-2xl shadow-lg border border-gray-200 w-full object-cover">
+                
                 <!-- CALL TO ACTION BOX FOR PDF -->
-                <div class="bg-slate-100 p-6 rounded-xl border border-slate-200 mt-6">
-                    <h4 class="font-bold text-slate-800 mb-2 underline text-sm uppercase">Complete Academic Document</h4>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <h4 class="font-bold text-slate-800 mb-2 text-sm uppercase tracking-wider"><i class="fa-solid fa-book-open text-blue-600 mr-2"></i>Complete Academic Document</h4>
                     <p class="text-sm text-slate-600 mb-4 font-light italic">The full 60+ page dissertation including literature review, full methodology, and appendices is available for download.</p>
-                    <a href="dissertation.pdf" target="_blank" class="text-blue-700 font-bold hover:underline text-sm inline-flex items-center">
+                    <a href="dissertation.pdf" target="_blank" class="text-white bg-blue-700 hover:bg-blue-800 transition px-5 py-2.5 rounded-lg font-bold text-xs inline-flex items-center shadow-md">
                         <i class="fa-solid fa-download mr-2"></i> Download Full PDF Version
                     </a>
                 </div>
             </div>
 
-            <div class="bg-blue-100 p-8 rounded-2xl shadow-inner border border-blue-200">
-                <h3 class="font-bold text-blue-800 mb-4 uppercase text-sm"><i class="fa-solid fa-location-dot mr-2"></i>Key Study Statistics</h3>
-                <ul class="space-y-3 text-sm">
-                    <li class="flex justify-between border-b border-blue-200 pb-2"><span>Gram Panchayats</span> <span class="font-bold">8</span></li>
-                    <li class="flex justify-between border-b border-blue-200 pb-2"><span>District</span> <span class="font-bold">Puruliya</span></li>
-                    <li class="flex justify-between border-b border-blue-200 pb-2"><span>Analysis Model</span> <span class="font-bold uppercase text-[10px]">IPA & Improvement Index</span></li>
-                    <li class="flex justify-between"><span>Researcher</span> <span class="font-bold">Mouparna Dhar</span></li>
-                </ul>
-                <!-- Inclusion of Chhau Masks Photo for local context -->
-                <div class="mt-8">
-                    <img src="masks.jpg" alt="Cultural Heritage of Purulia" class="rounded-xl shadow-lg border-2 border-white">
-                    <p class="text-[10px] text-blue-800 mt-2 font-bold uppercase tracking-widest text-center italic">Cultural Heritage of Baghmundi</p>
+            <!-- Right Column: Stats Box, Map, Masks -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <!-- Stats Box -->
+                <div class="bg-blue-50 p-6 rounded-2xl shadow-sm border border-blue-100">
+                    <h3 class="font-black text-blue-800 mb-4 uppercase text-xs tracking-widest"><i class="fa-solid fa-chart-pie mr-2"></i>Key Study Statistics</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex justify-between border-b border-blue-200/60 pb-2"><span class="text-gray-600">Gram Panchayats</span> <span class="font-bold text-blue-900">8</span></li>
+                        <li class="flex justify-between border-b border-blue-200/60 pb-2"><span class="text-gray-600">District</span> <span class="font-bold text-blue-900">Puruliya</span></li>
+                        <li class="flex justify-between border-b border-blue-200/60 pb-2"><span class="text-gray-600">Analysis Model</span> <span class="font-bold text-blue-900 uppercase text-[10px] bg-blue-200 px-2 py-0.5 rounded">IPA & Index</span></li>
+                        <li class="flex justify-between items-center pt-1"><span class="text-gray-600">Researcher</span> <span class="font-bold text-blue-900">Mouparna Dhar</span></li>
+                    </ul>
                 </div>
+
+                <!-- Map -->
+                <img src="map.png" alt="Study Area Map" class="rounded-2xl shadow-md border border-gray-200 w-full object-cover">
+
+                <!-- Masks Image with Sleek Overlay -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-md border border-gray-200">
+                    <img src="masks.jpg" alt="Cultural Heritage of Purulia" class="w-full object-cover aspect-video transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-slate-900/90 to-transparent p-4">
+                        <p class="text-white text-xs font-bold uppercase tracking-widest drop-shadow-md">Cultural Heritage of Baghmundi</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- INTERACTIVE RESULTS SECTION -->
+    <!-- INTERACTIVE RESULTS SECTION (SAME AS BEFORE) -->
     <section id="results" class="py-16 px-4 bg-gray-50 border-t">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-4 text-blue-900 uppercase">Interactive Data Dashboard</h2>
@@ -149,28 +160,28 @@
         const data = {
             mgnrega: {
                 title: "MGNREGA Scheme",
-                points: [{x: 1, y: 1, label: "Ajodhya"},{x: 3.08, y: 1.91, label: "Baghmundi"},{x: 1.45, y: 2.31, label: "Beergram"},{x: 2.45, y: 2.95, label: "Burdakalimati"},{x: 1.66, y: 2.74, label: "Matha"},{x: 5, y: 3.12, label: "Serengdih"},{x: 1.55, y: 2.21, label: "Sindri"},{x: 3.36, y: 5, label: "Tunturisuisa"}],
+                points:[{x: 1, y: 1, label: "Ajodhya"},{x: 3.08, y: 1.91, label: "Baghmundi"},{x: 1.45, y: 2.31, label: "Beergram"},{x: 2.45, y: 2.95, label: "Burdakalimati"},{x: 1.66, y: 2.74, label: "Matha"},{x: 5, y: 3.12, label: "Serengdih"},{x: 1.55, y: 2.21, label: "Sindri"},{x: 3.36, y: 5, label: "Tunturisuisa"}],
                 meanX: 2.44, meanY: 2.66,
                 priorityScore: "2.96", priorityGP: "Matha GP",
                 insights: `<p class="text-sm text-gray-700 bg-red-50 p-4 border-l-4 border-red-500"><strong>Urgent:</strong> Matha GP falls in 'Concentrate Here'. Low employment vs. high job card dependency.</p>`
             },
             pmayg: {
                 title: "PMAY-G Scheme",
-                points: [{x: 4.73, y: 5, label: "Baghmundi"},{x: 4.5, y: 1.21, label: "Beergram"},{x: 1, y: 1.09, label: "Burdakalimati"},{x: 4.05, y: 1, label: "Matha"},{x: 5, y: 3.88, label: "Serengdih"},{x: 3.65, y: 2.07, label: "Sindri"},{x: 4.79, y: 4.58, label: "Tunturisuisa"}],
+                points:[{x: 4.73, y: 5, label: "Baghmundi"},{x: 4.5, y: 1.21, label: "Beergram"},{x: 1, y: 1.09, label: "Burdakalimati"},{x: 4.05, y: 1, label: "Matha"},{x: 5, y: 3.88, label: "Serengdih"},{x: 3.65, y: 2.07, label: "Sindri"},{x: 4.79, y: 4.58, label: "Tunturisuisa"}],
                 meanX: 3.96, meanY: 2.69,
                 priorityScore: "0.00", priorityGP: "No Crisis Area",
                 insights: `<p class="text-sm text-gray-700 bg-blue-50 p-4 border-l-4 border-blue-500"><strong>Optimal:</strong> No GPs fall in the critical quadrant. This scheme is functioning exceptionally well.</p>`
             },
             daynrlm: {
                 title: "DAY-NRLM (Anandadhara)",
-                points: [{x: 1, y: 1, label: "Ajodhya"},{x: 5, y: 3.15, label: "Baghmundi"},{x: 1.25, y: 3.89, label: "Beergram"},{x: 1.36, y: 4.38, label: "Burdakalimati"},{x: 1.07, y: 2.43, label: "Matha"},{x: 1.34, y: 3.48, label: "Serengdih"},{x: 1.28, y: 3.85, label: "Sindri"},{x: 1.23, y: 5, label: "Tunturisuisa"}],
+                points:[{x: 1, y: 1, label: "Ajodhya"},{x: 5, y: 3.15, label: "Baghmundi"},{x: 1.25, y: 3.89, label: "Beergram"},{x: 1.36, y: 4.38, label: "Burdakalimati"},{x: 1.07, y: 2.43, label: "Matha"},{x: 1.34, y: 3.48, label: "Serengdih"},{x: 1.28, y: 3.85, label: "Sindri"},{x: 1.23, y: 5, label: "Tunturisuisa"}],
                 meanX: 1.69, meanY: 3.39,
                 priorityScore: "18.85", priorityGP: "Tunturisuisa",
                 insights: `<p class="text-sm text-gray-700 bg-red-50 p-4 border-l-4 border-red-500"><strong>Systemic Failure:</strong> 5 out of 8 GPs are failing in bank linkage despite high mobilization.</p>`
             },
             pmkisan: {
                 title: "PM-KISAN Scheme",
-                points: [{x: 1, y: 1, label: "Ajodhya"},{x: 4.68, y: 5, label: "Baghmundi"},{x: 5, y: 4.5, label: "Beergram"},{x: 5, y: 3.82, label: "Burdakalimati"},{x: 5, y: 2.83, label: "Matha"},{x: 5, y: 3.62, label: "Serengdih"},{x: 5, y: 3.48, label: "Sindri"},{x: 5, y: 3.52, label: "Tunturisuisa"}],
+                points:[{x: 1, y: 1, label: "Ajodhya"},{x: 4.68, y: 5, label: "Baghmundi"},{x: 5, y: 4.5, label: "Beergram"},{x: 5, y: 3.82, label: "Burdakalimati"},{x: 5, y: 2.83, label: "Matha"},{x: 5, y: 3.62, label: "Serengdih"},{x: 5, y: 3.48, label: "Sindri"},{x: 5, y: 3.52, label: "Tunturisuisa"}],
                 meanX: 2.88, meanY: 2.44,
                 priorityScore: "20.00", priorityGP: "Tunturisuisa",
                 insights: `<p class="text-sm text-gray-700 bg-green-50 p-4 border-l-4 border-green-500"><strong>High Success:</strong> 6 out of 8 GPs show perfect transaction rates for farmers.</p>`
@@ -189,9 +200,9 @@
             document.getElementById('btn-' + schemeKey).className = "scheme-btn active bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold transition";
 
             if (ipaChart) ipaChart.destroy();
-            ipaChart = new Chart(ctx, {
+            ipaChart = new Chart(document.getElementById('ipaChart').getContext('2d'), {
                 type: 'scatter',
-                data: { datasets: [{ label: 'Gram Panchayats', data: scheme.points, backgroundColor: '#1e40af', pointRadius: 8, pointHoverRadius: 10 }] },
+                data: { datasets:[{ label: 'Gram Panchayats', data: scheme.points, backgroundColor: '#1e40af', pointRadius: 8, pointHoverRadius: 10 }] },
                 options: {
                     responsive: true, maintainAspectRatio: false,
                     scales: {
@@ -200,7 +211,7 @@
                     },
                     plugins: { tooltip: { callbacks: { label: (i) => `${scheme.points[i.dataIndex].label}: (P: ${i.parsed.x}, I: ${i.parsed.y})` } } }
                 },
-                plugins: [{
+                plugins:[{
                     id: 'crosshair',
                     afterDraw: (chart) => {
                         const {ctx, scales: {x, y}} = chart;
@@ -215,7 +226,6 @@
                 }]
             });
         }
-        const ctx = document.getElementById('ipaChart').getContext('2d');
         updateChart('mgnrega');
     </script>
 </body>
