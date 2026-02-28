@@ -12,7 +12,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
+        
+        /* Updated Hero Styling to include the background image */
+        .hero-custom { 
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(59, 130, 246, 0.7) 100%), url('header-bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
+        
         .quadrant-label { font-size: 10px; font-weight: bold; opacity: 0.7; }
     </style>
 </head>
@@ -31,7 +38,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero-gradient text-white py-20 px-4">
+    <header class="hero-custom text-white py-20 px-4">
         <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">
                 Evaluating Public Service Delivery in Rural India
@@ -42,7 +49,6 @@
                 <a href="#results" class="bg-white text-blue-800 px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition shadow-lg">
                     <i class="fa-solid fa-chart-line mr-2"></i>View Data Findings
                 </a>
-                <!-- NEW BUTTON FOR FULL DISSERTATION -->
                 <a href="dissertation.pdf" target="_blank" class="bg-red-600 text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-lg inline-flex items-center">
                     <i class="fa-solid fa-file-pdf mr-2"></i>Read Full Dissertation
                 </a>
@@ -57,6 +63,10 @@
             <div>
                 <h2 class="text-3xl font-bold text-blue-900 mb-6 border-l-4 border-blue-600 pl-4 uppercase tracking-wide">Study Overview</h2>
                 
+                <!-- Inclusion of Family/People Photo -->
+                <img src="family.jpg" alt="Local Community in Purulia" class="rounded-lg shadow-md mb-6 border border-gray-200">
+                
+                <!-- Map still remains as requested -->
                 <img src="map.png" alt="Study Area Map" class="rounded-lg shadow-md mb-6 border border-gray-200">
                 
                 <p class="mb-4 text-gray-700 leading-relaxed">
@@ -81,11 +91,16 @@
                     <li class="flex justify-between border-b border-blue-200 pb-2"><span>Analysis Model</span> <span class="font-bold uppercase text-[10px]">IPA & Improvement Index</span></li>
                     <li class="flex justify-between"><span>Researcher</span> <span class="font-bold">Mouparna Dhar</span></li>
                 </ul>
+                <!-- Inclusion of Chhau Masks Photo for local context -->
+                <div class="mt-8">
+                    <img src="masks.jpg" alt="Cultural Heritage of Purulia" class="rounded-xl shadow-lg border-2 border-white">
+                    <p class="text-[10px] text-blue-800 mt-2 font-bold uppercase tracking-widest text-center italic">Cultural Heritage of Baghmundi</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- INTERACTIVE RESULTS SECTION (SAME AS BEFORE) -->
+    <!-- INTERACTIVE RESULTS SECTION -->
     <section id="results" class="py-16 px-4 bg-gray-50 border-t">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-center mb-4 text-blue-900 uppercase">Interactive Data Dashboard</h2>
@@ -174,7 +189,7 @@
             document.getElementById('btn-' + schemeKey).className = "scheme-btn active bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold transition";
 
             if (ipaChart) ipaChart.destroy();
-            ipaChart = new Chart(document.getElementById('ipaChart').getContext('2d'), {
+            ipaChart = new Chart(ctx, {
                 type: 'scatter',
                 data: { datasets: [{ label: 'Gram Panchayats', data: scheme.points, backgroundColor: '#1e40af', pointRadius: 8, pointHoverRadius: 10 }] },
                 options: {
@@ -200,6 +215,7 @@
                 }]
             });
         }
+        const ctx = document.getElementById('ipaChart').getContext('2d');
         updateChart('mgnrega');
     </script>
 </body>
