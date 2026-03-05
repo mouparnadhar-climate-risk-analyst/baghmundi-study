@@ -10,7 +10,7 @@ This project is a digital representation of my post-graduate dissertation. It pr
 
 Rather than providing broad audits, this study employs **Importance-Performance Analysis (IPA)** to help local administrators (BDOs and Panchayat Pradhans) identify exactly where implementation bottlenecks exist and which areas require the most urgent intervention.
 
-### 🔗 [View the Interactive Dashboard Here](https://your-username.github.io/your-repo-name/)
+### 🔗 [View the Interactive Dashboard Here] (https://mouparnadhar-climate-risk-analyst.github.io/baghmundi-study/)
 
 ---
 
